@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ti">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Tigrinya Spelling Suggester - Check and correct Tigrinya text with intelligent suggestions">
+    <meta name="keywords" content="Tigrinya, spell checker, spelling, Ge'ez, Ethiopic, ትግርኛ">
+    <title>Tigrinya Spelling Suggester | ትግርኛ ፊደል መርመራ</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+Ethiopic:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="title">
+                    <span class="title-icon">✨</span>
+                    Tigrinya Spelling Suggester
+                </h1>
+                <p class="subtitle">ትግርኛ ፊደል መርመራን መሻሻሊ | Intelligent Tigrinya Spell Checker</p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Input Section -->
+            <section class="input-section">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span class="section-icon">📝</span>
+                        Enter Tigrinya Text
+                    </h2>
+                    <div class="connection-status" id="connectionStatus">
+                        <span class="status-dot"></span>
+                        <span class="status-text">Connecting...</span>
+                    </div>
+                </div>
+
+                <div class="textarea-wrapper">
+                    <textarea id="inputText" class="input-textarea"
+                        placeholder="ትግርኛ ጽሑፍ ኣብዚ ጸሓፉ... (Type or paste Tigrinya text here...)"
+                        spellcheck="false"></textarea>
+                    <div class="textarea-actions">
+                        <button id="checkBtn" class="btn btn-primary">
+                            Check Spelling
+                        </button>
+                        <button id="clearBtn" class="btn btn-secondary">
+                            Clear Text
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Results Section -->
+            <section class="results-section">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span class="section-icon">💡</span>
+                        Interactive Results
+                    </h2>
+                    <button class="features-btn" id="featuresBtn">
+                        Features: Suggestions & Corrections
+                    </button>
+                </div>
+
+                <div id="resultsContainer" class="results-container">
+                    <div class="empty-state">
+                        <div class="empty-icon">📖</div>
+                        <p class="empty-text">Type some Tigrinya text to get started</p>
+                        <p class="empty-subtext">Misspelled words will be highlighted and you can hover over them for
+                            suggestions</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Statistics Section -->
+            <section class="stats-section">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span class="section-icon">📊</span>
+                        Statistics
+                    </h2>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-card-icon">📚</div>
+                        <div class="stat-card-content">
+                            <div class="stat-card-value" id="dictionarySize">-</div>
+                            <div class="stat-card-label">Dictionary Words</div>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-card-icon">⚡</div>
+                        <div class="stat-card-content">
+                            <div class="stat-card-value" id="cacheHits">-</div>
+                            <div class="stat-card-label">Cache Hits</div>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-card-icon">🎯</div>
+                        <div class="stat-card-content">
+                            <div class="stat-card-value" id="accuracy">-</div>
+                            <div class="stat-card-label">Accuracy</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Built with ❤️ for the Tigrinya language community</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
